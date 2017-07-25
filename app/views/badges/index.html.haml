@@ -1,0 +1,9 @@
+#badges.transitions-enabled
+	- @badges.each do |badge|
+		.box.panel.panel-default
+			= link_to (image_tag badge.image.url(:thumb)), badge
+			%h2= link_to badge.title, badge
+			%p.user
+				Submitted by
+				= badge.user.email
+                
